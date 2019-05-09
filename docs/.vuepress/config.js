@@ -1,17 +1,17 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: '../../vuepress',
+  //dest: '../../vuepress', // vuepress build 输出目录
   locales: {
+    // '/': {
+    //   lang: 'en-US',
+    //   title: 'VuePress 1.x',
+    //   description: 'Vue-powered Static Site Generator'
+    // },
     '/': {
-      lang: 'en-US',
-      title: 'VuePress 1.x',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress 1.x',
-      description: 'Vue 驱动的静态网站生成器'
+      title: '徐州乐园项目',
+      description: '项目跟踪'
     }
   },
   head: [
@@ -25,9 +25,9 @@ module.exports = ctx => ({
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  theme: '@vuepress/vue',
+  //theme: '@vuepress/vue',
   themeConfig: {
-    repo: 'vuejs/vuepress',
+   // repo: 'vuejs/vuepress',
     editLinks: true,
     docsDir: 'packages/docs/docs',
     // #697 Provided by the official algolia team.
@@ -36,7 +36,7 @@ module.exports = ctx => ({
     //   indexName: 'vuepress'
     // }) : null,
     locales: {
-      '/': {
+      '/en': {
         label: 'English',
         selectText: 'Languages',
         editLinkText: 'Edit this page on GitHub',
@@ -49,15 +49,15 @@ module.exports = ctx => ({
           '/theme/': getThemeSidebar('Theme', 'Introduction'),
         }
       },
-      '/zh/': {
+      '/': {
         label: '简体中文',
         selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
+        //editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
         nav: require('./nav/zh'),
         sidebar: {
           '/zh/api/': getApiSidebar(),
-          '/zh/guide/': getGuideSidebar('指南', '深入'),
+          '/zh/inside/': getGuideSidebar('配置', 'bug'),
           '/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
           '/zh/theme/': getThemeSidebar('主题', '介绍')
         }
@@ -66,14 +66,14 @@ module.exports = ctx => ({
   },
   plugins: [
     ['@vuepress/back-to-top', true],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
+    //['@vuepress/pwa', {
+     // serviceWorker: true,
+      //updatePopup: true
+    //}],
     ['@vuepress/medium-zoom', true],
-    ['@vuepress/google-analytics', {
-      ga: 'UA-128189152-1'
-    }],
+    // ['@vuepress/google-analytics', {
+    //   ga: 'UA-128189152-1'
+    // }],
     ['container', {
       type: 'vue',
       before: '<pre class="vue-container"><code>',
@@ -105,24 +105,14 @@ function getGuideSidebar (groupA, groupB) {
       collapsable: false,
       children: [
         '',
-        'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy',
+        'env'
       ]
     },
     {
       title: groupB,
       collapsable: false,
       children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
+
       ]
     }
   ]
