@@ -4,8 +4,23 @@
 export const siteData = {
   "title": "",
   "description": "",
-  "base": "/",
+  "base": "/leyuan/",
   "pages": [
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "/hero.png",
+        "actionText": "进入 →",
+        "actionLink": "/zh/inside/",
+        "footer": "LINEWIT"
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-73887561",
+      "path": "/",
+      "lastUpdated": "2019-5-14 15:04:03"
+    },
     {
       "title": "Home",
       "frontmatter": {
@@ -43,46 +58,6 @@ export const siteData = {
       "lastUpdated": "2019-5-9 19:32:24"
     },
     {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroImage": "/hero.png",
-        "actionText": "进入 →",
-        "actionLink": "/zh/inside/",
-        "footer": "LINEWIT"
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-73887561",
-      "path": "/",
-      "lastUpdated": "2019-5-9 19:32:24"
-    },
-    {
-      "title": "BS",
-      "frontmatter": {},
-      "regularPath": "/zh/customer/leyuan/leyuan.html",
-      "relativePath": "zh/customer/leyuan/leyuan.md",
-      "key": "v-44e6070c",
-      "path": "/zh/customer/leyuan/leyuan.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "初始配置",
-          "slug": "初始配置"
-        },
-        {
-          "level": 2,
-          "title": "设备巡检",
-          "slug": "设备巡检"
-        },
-        {
-          "level": 2,
-          "title": "日结算",
-          "slug": "日结算"
-        }
-      ]
-    },
-    {
       "title": "说明",
       "frontmatter": {},
       "regularPath": "/zh/inside/",
@@ -108,6 +83,32 @@ export const siteData = {
       "lastUpdated": "2019-5-9 20:46:35"
     },
     {
+      "title": "BS",
+      "frontmatter": {},
+      "regularPath": "/zh/customer/leyuan/leyuan.html",
+      "relativePath": "zh/customer/leyuan/leyuan.md",
+      "key": "v-44e6070c",
+      "path": "/zh/customer/leyuan/leyuan.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "初始配置",
+          "slug": "初始配置"
+        },
+        {
+          "level": 2,
+          "title": "设备巡检",
+          "slug": "设备巡检"
+        },
+        {
+          "level": 2,
+          "title": "日结算",
+          "slug": "日结算"
+        }
+      ],
+      "lastUpdated": "2019-5-14 15:04:03"
+    },
+    {
       "title": "APP",
       "frontmatter": {},
       "regularPath": "/zh/inside/leyuan.html",
@@ -125,7 +126,8 @@ export const siteData = {
           "title": "由于扩展配置问题而无法提供您的请求页面",
           "slug": "由于扩展配置问题而无法提供您的请求页面"
         }
-      ]
+      ],
+      "lastUpdated": "2019-5-14 15:04:03"
     }
   ],
   "themeConfig": {
@@ -147,9 +149,6 @@ export const siteData = {
               {
                 "text": "徐州乐园",
                 "link": "/zh/customer/leyuan/leyuan.html"
-              },
-              {
-                "text": "MES"
               }
             ]
           }
@@ -160,7 +159,6 @@ export const siteData = {
               "title": "MES",
               "collapsable": false,
               "children": [
-                "",
                 "env"
               ]
             },

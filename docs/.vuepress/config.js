@@ -1,6 +1,7 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
+  base: '/leyuan/',
   configureWebpack: {
     resolve: {
       alias: {
@@ -44,19 +45,6 @@ module.exports = ctx => ({
     //   indexName: 'vuepress'
     // }) : null,
     locales: {
-      // '/en': {
-      //   label: 'English',
-      //   selectText: 'Languages',
-      //   editLinkText: 'Edit this page on GitHub',
-      //   lastUpdated: 'Last Updated',
-      //   nav: require('./nav/en'),
-      //   sidebar: {
-      //     '/api/': getApiSidebar(),
-      //     '/guide/': getGuideSidebar('Guide', 'Advanced'),
-      //     '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
-      //     '/theme/': getThemeSidebar('Theme', 'Introduction'),
-      //   }
-      // },
       '/': {
         label: '简体中文',
         selectText: '选择语言',
@@ -92,8 +80,8 @@ module.exports = ctx => ({
     }],
   ],
   extraWatchFiles: [
-    '.vuepress/nav/en.js',
-    '.vuepress/nav/zh.js',
+    //'.vuepress/nav/en.js',
+    '.vuepress/nav/zh.js'
   ]
 
 })
@@ -105,7 +93,6 @@ function getInsideSidebar (groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        '',
         'env'
       ]
     },

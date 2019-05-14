@@ -9,9 +9,6 @@ module.exports = [
       {
         text: '徐州乐园',
         link: '/zh/customer/leyuan/leyuan.html'
-      },
-      {
-        text: 'MES'
       }
     ]
   },

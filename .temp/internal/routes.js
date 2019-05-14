@@ -9,18 +9,6 @@ import GlobalLayout from "/Users/huoxd/Desktop/FUCK/VUEPRESS/vuepress_init/node_
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-7e455ed1",
-    path: "/zh/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7e455ed1").then(next)
-    },
-  },
-  {
-    path: "/zh/index.html",
-    redirect: "/zh/"
-  },
-  {
     name: "v-73887561",
     path: "/",
     component: GlobalLayout,
@@ -33,12 +21,16 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-44e6070c",
-    path: "/zh/customer/leyuan/leyuan.html",
+    name: "v-7e455ed1",
+    path: "/zh/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-44e6070c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-7e455ed1").then(next)
     },
+  },
+  {
+    path: "/zh/index.html",
+    redirect: "/zh/"
   },
   {
     name: "v-539740f6",
@@ -58,6 +50,14 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-37867b7a").then(next)
+    },
+  },
+  {
+    name: "v-44e6070c",
+    path: "/zh/customer/leyuan/leyuan.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-44e6070c").then(next)
     },
   },
   {
