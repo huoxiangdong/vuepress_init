@@ -5,7 +5,15 @@ module.exports = [
   },
   {
     text: '对外',
-    link: '/zh/customer/'
+    items: [
+      {
+        text: '徐州乐园',
+        link: '/zh/customer/leyuan/leyuan.html'
+      },
+      {
+        text: 'MES'
+      }
+    ]
   },
   // {
   //   text: '插件',

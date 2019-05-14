@@ -1,6 +1,14 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@error': path.resolve(__dirname, 'public/images/error'),
+        '@appConfig': path.resolve(__dirname, 'public/images/appConfig')
+      }
+    }
+  },
   //dest: '../../vuepress', // vuepress build 输出目录
   locales: {
     // '/': {
@@ -10,8 +18,8 @@ module.exports = ctx => ({
     // },
     '/': {
       lang: 'zh-CN',
-      title: '徐州乐园项目',
-      description: '项目跟踪'
+      title: '蓝今项目跟踪',
+      description: '问题记录'
     }
   },
   head: [
@@ -36,19 +44,19 @@ module.exports = ctx => ({
     //   indexName: 'vuepress'
     // }) : null,
     locales: {
-      '/en': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        nav: require('./nav/en'),
-        sidebar: {
-          '/api/': getApiSidebar(),
-          '/guide/': getGuideSidebar('Guide', 'Advanced'),
-          '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
-          '/theme/': getThemeSidebar('Theme', 'Introduction'),
-        }
-      },
+      // '/en': {
+      //   label: 'English',
+      //   selectText: 'Languages',
+      //   editLinkText: 'Edit this page on GitHub',
+      //   lastUpdated: 'Last Updated',
+      //   nav: require('./nav/en'),
+      //   sidebar: {
+      //     '/api/': getApiSidebar(),
+      //     '/guide/': getGuideSidebar('Guide', 'Advanced'),
+      //     '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
+      //     '/theme/': getThemeSidebar('Theme', 'Introduction'),
+      //   }
+      // },
       '/': {
         label: '简体中文',
         selectText: '选择语言',
@@ -56,10 +64,8 @@ module.exports = ctx => ({
         lastUpdated: '上次更新',
         nav: require('./nav/zh'),
         sidebar: {
-          '/zh/api/': getApiSidebar(),
-          '/zh/inside/': getGuideSidebar('配置', 'bug'),
-          '/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
-          '/zh/theme/': getThemeSidebar('主题', '介绍')
+          '/zh/inside/': getInsideSidebar('MES', '徐州乐园'),
+          '/zh/customer/leyuan/': getCustomerSidebar('操作说明'),
         }
       }
     }
@@ -89,16 +95,11 @@ module.exports = ctx => ({
     '.vuepress/nav/en.js',
     '.vuepress/nav/zh.js',
   ]
+
 })
 
-function getApiSidebar () {
-  return [
-    'cli',
-    'node'
-  ]
-}
-
-function getGuideSidebar (groupA, groupB) {
+// 对内
+function getInsideSidebar (groupA, groupB) {
   return [
     {
       title: groupA,
@@ -112,35 +113,25 @@ function getGuideSidebar (groupA, groupB) {
       title: groupB,
       collapsable: false,
       children: [
-
+       'leyuan'
       ]
     }
   ]
 }
 
-const officalPlugins = fs
-  .readdirSync(path.resolve(__dirname, '../plugin/official'))
-  .map(filename => 'official/' + filename.slice(0, -3))
-  .sort()
-
-function getPluginSidebar (pluginTitle, pluginIntro, officialPluginTitle) {
+// const officalPlugins = fs
+//   .readdirSync(path.resolve(__dirname, '../plugin/official'))
+//   .map(filename => 'official/' + filename.slice(0, -3))
+//   .sort()
+// 对外
+function getCustomerSidebar (customer) {
   return [
     {
-      title: pluginTitle,
+      title: customer,
       collapsable: false,
       children: [
-        ['', pluginIntro],
-        'using-a-plugin',
-        'writing-a-plugin',
-        'life-cycle',
-        'option-api',
-        'context-api'
+        'leyuan'
       ]
-    },
-    {
-      title: officialPluginTitle,
-      collapsable: false,
-      children: officalPlugins,
     }
   ]
 }
@@ -162,3 +153,5 @@ function getThemeSidebar (groupA, introductionA) {
     },
   ]
 }
+
+
