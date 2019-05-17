@@ -1,4 +1,4 @@
-# APP
+# APP & BS
 
 ## 服务端返回图片的路径
 
@@ -17,3 +17,11 @@ select top 1 * from pd_document where did='D20190500000006'
 - 配置
 ![config](~@appConfig/woff.png) 
 
+## 关键字
+- 错误
+![error](~@error/keyvalue.png) 
+- 配置
+添加关键字
+![config](~@appConfig/keyvalue.png) 
+
+## 细表有使用 "字段名|字段名"，这种配置方式的，细表主键必须显示

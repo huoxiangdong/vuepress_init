@@ -45,19 +45,19 @@ export const routes = [
     redirect: "/zh/inside/"
   },
   {
-    name: "v-37867b7a",
-    path: "/zh/inside/env.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-37867b7a").then(next)
-    },
-  },
-  {
     name: "v-44e6070c",
     path: "/zh/customer/leyuan/leyuan.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-44e6070c").then(next)
+    },
+  },
+  {
+    name: "v-37867b7a",
+    path: "/zh/inside/env.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-37867b7a").then(next)
     },
   },
   {

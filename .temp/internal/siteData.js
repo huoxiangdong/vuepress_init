@@ -67,22 +67,6 @@ export const siteData = {
       "lastUpdated": "2019-5-9 20:46:35"
     },
     {
-      "title": "环境搭建",
-      "frontmatter": {},
-      "regularPath": "/zh/inside/env.html",
-      "relativePath": "zh/inside/env.md",
-      "key": "v-37867b7a",
-      "path": "/zh/inside/env.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "需要文件",
-          "slug": "需要文件"
-        }
-      ],
-      "lastUpdated": "2019-5-9 20:46:35"
-    },
-    {
       "title": "BS",
       "frontmatter": {},
       "regularPath": "/zh/customer/leyuan/leyuan.html",
@@ -109,7 +93,23 @@ export const siteData = {
       "lastUpdated": "2019-5-14 15:04:03"
     },
     {
-      "title": "APP",
+      "title": "环境搭建",
+      "frontmatter": {},
+      "regularPath": "/zh/inside/env.html",
+      "relativePath": "zh/inside/env.md",
+      "key": "v-37867b7a",
+      "path": "/zh/inside/env.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "需要文件",
+          "slug": "需要文件"
+        }
+      ],
+      "lastUpdated": "2019-5-9 20:46:35"
+    },
+    {
+      "title": "APP & BS",
       "frontmatter": {},
       "regularPath": "/zh/inside/leyuan.html",
       "relativePath": "zh/inside/leyuan.md",
@@ -125,6 +125,16 @@ export const siteData = {
           "level": 2,
           "title": "由于扩展配置问题而无法提供您的请求页面",
           "slug": "由于扩展配置问题而无法提供您的请求页面"
+        },
+        {
+          "level": 2,
+          "title": "关键字",
+          "slug": "关键字"
+        },
+        {
+          "level": 2,
+          "title": "细表有使用 \"字段名|字段名\"，这种配置方式的，细表主键必须显示",
+          "slug": "细表有使用-字段名-字段名-，这种配置方式的，细表主键必须显示"
         }
       ],
       "lastUpdated": "2019-5-14 15:04:03"
